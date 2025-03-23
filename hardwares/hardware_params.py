@@ -32,4 +32,10 @@ hardware_params = {
     # support AVX-512 & FMA (512-bit), they has throughput of 1 cycle
     # https://www.intel.com/content/www/us/en/products/sku/230496/intel-core-i913900k-processor-36m-cache-up-to-5-80-ghz/specifications.html
     "intel_13900k": {"bandwidth": 89.6e9, "FP16": 8 * 5.4e9 * (512 / 16), "onchip_buffer": 36e6},
+    "Apple_A18_Pro": {"bandwidth": 60e9, "FP16":380e9, "INT8": 380e9, "onchip_buffer": 44e6},
+    "Apple_A17_Pro": {"bandwidth": 51.2e9, "FP16":350e9, "INT8": 350e9, "onchip_buffer": 44e6},
+    "Samsung_Exynos_2400": {"bandwidth": 68.3e9, "FP16":420e9, "INT8": 420e9, "onchip_buffer": 13.5e6},
+    "Qualcomm_Snapdragon_8_Gen3": {"bandwidth": 76.6e9, "FP16":340e9, "INT8": 340e9, "onchip_buffer": 44e6},
+    "MediaTek_Dimensity_9300": {"bandwidth": 76.8e9, "FP16":330e9, "INT8": 330e9, "onchip_buffer": 18e6},
+
 }
