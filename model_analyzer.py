@@ -35,6 +35,10 @@ class ModelAnalyzer:
                 # print(f"auto search config file {config_file} {file} {model_id}")
         assert config_file is not None, "config file is not found, please specify it manually."
         print(f"use config file {config_file} for {model_id}")
+        if "Qwen" in model_id:
+            source = "Qwen"
+            config_file = "configs/Qwen.py"
+            print(f"Detected Qwen model, forcing source to '{source}' and config_file to '{config_file}'")
         if source == "huggingface":
             self.model_params = AutoConfig.from_pretrained(model_id, trust_remote_code=True)
         else:
