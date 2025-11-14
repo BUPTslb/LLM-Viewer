@@ -11,7 +11,12 @@ def get_num_key_value_heads(model_params):
         return getattr(model_params, "num_attention_heads")
 
 def get_num_hidden_layers(model_params):
-    return getattr(model_params, "num_layers")
+    if hasattr(model_params, "num_layers"):
+        return getattr(model_params, "num_layers")
+    elif hasattr(model_params, "num_hidden_layers"):
+        return getattr(model_params, "num_hidden_layers")
+    else:
+        raise AttributeError("model_params has neither 'num_layers' nor 'num_hidden_layers' attribute")
 
 def get_intermediate_size(model_params):
     return getattr(model_params, "ffn_hidden_size")
