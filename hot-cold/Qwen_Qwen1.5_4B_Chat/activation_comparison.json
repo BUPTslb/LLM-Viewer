@@ -1,0 +1,26 @@
+{
+    "model": "Qwen/Qwen1.5-4B-Chat",
+    "activation_threshold": 0.001,
+    "dataset_averages": {
+        "wikitext": {
+            "overall_activation_percentage": 99.325,
+            "num_samples": 321
+        },
+        "gsm8k": {
+            "overall_activation_percentage": 99.3884,
+            "num_samples": 500
+        },
+        "cc_news": {
+            "overall_activation_percentage": 99.3945,
+            "num_samples": 500
+        },
+        "squad": {
+            "overall_activation_percentage": 99.3859,
+            "num_samples": 500
+        },
+        "cnn_dailymail": {
+            "overall_activation_percentage": 99.4017,
+            "num_samples": 500
+        }
+    }
+}

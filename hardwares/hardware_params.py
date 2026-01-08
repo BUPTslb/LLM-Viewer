@@ -32,4 +32,79 @@ hardware_params = {
     # support AVX-512 & FMA (512-bit), they has throughput of 1 cycle
     # https://www.intel.com/content/www/us/en/products/sku/230496/intel-core-i913900k-processor-36m-cache-up-to-5-80-ghz/specifications.html
     "intel_13900k": {"bandwidth": 89.6e9, "FP16": 8 * 5.4e9 * (512 / 16), "onchip_buffer": 36e6},
+    "Snapdragon_8_Gen3": {"bandwidth": 76.6e9, "FP16": 64000e9 , "onchip_buffer": 12e6},
+    "3DNF": {"bandwidth": 400e9, "FP16": 4000e9, "onchip_buffer": 6e6},
+    "RTX4090": {"bandwidth": 1010e9, "FP16": 82600e9, "onchip_buffer": 16384e3},
+    "Island": {"bandwidth": 216e9, "FP16": 4000e9, "INT8": 8e12, "INT4": 16e12, "onchip_buffer": 10e6},
+
+    # Flash-extended hardware model example.
+    # NOTE: Do not overwrite existing "bandwidth" for other platforms.
+    # Use explicit fields to distinguish DRAM vs Flash bandwidth.
+    "Samsung_Exynos_2400_flash": {
+        "dram_bandwidth": 200e9,
+        "dram_capacity": 16e9,  # bytes
+        "flash_bandwidth": 10e9,  # Flash 1 GPU
+        "flash_capacity": 512e9,  # bytes
+        "FP16": 200e12,
+        "onchip_buffer": 10240e3,
+    },
+    "AIPC_DRAM5600": {
+    # 32GB DDR5-5600 Desktop Memory
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 48e9,         # bytes
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 2048e8,         # bytes
+    # 32GB PCIE-HBF，PCIe 5.0 NVMe SSD 16*Lanes
+    "flash_bandwidth": 64e9,        # bytes/s
+    "flash_capacity": 64e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-DDR": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 2048e8,         # bytes
+    # 32GB PCIE-HBF，DDR
+    "flash_bandwidth": 120e9,        # bytes/s (≈ 4ch × 30GB/s) 4-channel LPDDR5
+    "flash_capacity": 64e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-2.5D": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 2048e8,         # bytes 可以更小
+    # 32GB PCIE-HBF，2.5D
+    "flash_bandwidth":  150e9,        # bytes/s 带宽和容量有关系
+    "flash_capacity": 64e9,        # bytes 
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
 }

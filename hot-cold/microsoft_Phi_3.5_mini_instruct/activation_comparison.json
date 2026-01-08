@@ -1,0 +1,26 @@
+{
+    "model": "microsoft/Phi-3.5-mini-instruct",
+    "activation_threshold": 0.001,
+    "dataset_averages": {
+        "wikitext": {
+            "overall_activation_percentage": 99.7047,
+            "num_samples": 321
+        },
+        "gsm8k": {
+            "overall_activation_percentage": 99.7118,
+            "num_samples": 500
+        },
+        "cc_news": {
+            "overall_activation_percentage": 99.7097,
+            "num_samples": 500
+        },
+        "squad": {
+            "overall_activation_percentage": 99.7214,
+            "num_samples": 500
+        },
+        "cnn_dailymail": {
+            "overall_activation_percentage": 99.7087,
+            "num_samples": 500
+        }
+    }
+}

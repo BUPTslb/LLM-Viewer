@@ -35,9 +35,22 @@ parser.add_argument(
     default=1,
     help="the number of devices for tensor parallelism to use"
 )
+parser.add_argument(
+    "--weight-storage",
+    type=str,
+    default="dram",
+    choices=["dram", "flash"],
+    help="where weights are stored (affects modeling when supported)",
+)
 args = parser.parse_args()
 
-analyzer = ModelAnalyzer(args.model_id, args.hardware, args.config_file,source=args.source)
+analyzer = ModelAnalyzer(
+    args.model_id,
+    args.hardware,
+    args.config_file,
+    source=args.source,
+    weight_storage=args.weight_storage,
+)
 results = analyzer.analyze(
     batchsize=args.batchsize,
     seqlen=args.seqlen,

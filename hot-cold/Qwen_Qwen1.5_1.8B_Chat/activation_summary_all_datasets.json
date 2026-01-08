@@ -1,0 +1,652 @@
+{
+    "model": "Qwen/Qwen1.5-1.8B-Chat",
+    "num_layers": 24,
+    "activation_threshold": 0.001,
+    "datasets": {
+        "wikitext": {
+            "dataset": "wikitext",
+            "split": "test",
+            "num_samples": 321,
+            "activation_threshold": 0.001,
+            "overall_avg_activation_percentage": 99.3312,
+            "layers": [
+                {
+                    "layer_id": 0,
+                    "avg_activation_percentage": 97.4127,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 1,
+                    "avg_activation_percentage": 98.4592,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 2,
+                    "avg_activation_percentage": 98.5422,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 3,
+                    "avg_activation_percentage": 98.1028,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 4,
+                    "avg_activation_percentage": 98.6123,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 5,
+                    "avg_activation_percentage": 99.0471,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 6,
+                    "avg_activation_percentage": 99.4021,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 7,
+                    "avg_activation_percentage": 99.4638,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 8,
+                    "avg_activation_percentage": 99.4576,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 9,
+                    "avg_activation_percentage": 99.3649,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 10,
+                    "avg_activation_percentage": 99.4722,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 11,
+                    "avg_activation_percentage": 99.5078,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 12,
+                    "avg_activation_percentage": 99.548,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 13,
+                    "avg_activation_percentage": 99.5718,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 14,
+                    "avg_activation_percentage": 99.6523,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 15,
+                    "avg_activation_percentage": 99.7076,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 16,
+                    "avg_activation_percentage": 99.7238,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 17,
+                    "avg_activation_percentage": 99.7754,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 18,
+                    "avg_activation_percentage": 99.7919,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 19,
+                    "avg_activation_percentage": 99.8172,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 20,
+                    "avg_activation_percentage": 99.8308,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 21,
+                    "avg_activation_percentage": 99.8764,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 22,
+                    "avg_activation_percentage": 99.8821,
+                    "num_samples": 321
+                },
+                {
+                    "layer_id": 23,
+                    "avg_activation_percentage": 99.9277,
+                    "num_samples": 321
+                }
+            ]
+        },
+        "gsm8k": {
+            "dataset": "gsm8k",
+            "split": "train",
+            "num_samples": 500,
+            "activation_threshold": 0.001,
+            "overall_avg_activation_percentage": 99.3079,
+            "layers": [
+                {
+                    "layer_id": 0,
+                    "avg_activation_percentage": 96.6956,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 1,
+                    "avg_activation_percentage": 98.2092,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 2,
+                    "avg_activation_percentage": 98.2782,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 3,
+                    "avg_activation_percentage": 98.0164,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 4,
+                    "avg_activation_percentage": 98.4844,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 5,
+                    "avg_activation_percentage": 98.987,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 6,
+                    "avg_activation_percentage": 99.337,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 7,
+                    "avg_activation_percentage": 99.4414,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 8,
+                    "avg_activation_percentage": 99.4906,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 9,
+                    "avg_activation_percentage": 99.487,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 10,
+                    "avg_activation_percentage": 99.5767,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 11,
+                    "avg_activation_percentage": 99.6061,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 12,
+                    "avg_activation_percentage": 99.6421,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 13,
+                    "avg_activation_percentage": 99.6699,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 14,
+                    "avg_activation_percentage": 99.7241,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 15,
+                    "avg_activation_percentage": 99.7597,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 16,
+                    "avg_activation_percentage": 99.789,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 17,
+                    "avg_activation_percentage": 99.8237,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 18,
+                    "avg_activation_percentage": 99.8518,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 19,
+                    "avg_activation_percentage": 99.8722,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 20,
+                    "avg_activation_percentage": 99.8867,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 21,
+                    "avg_activation_percentage": 99.9124,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 22,
+                    "avg_activation_percentage": 99.916,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 23,
+                    "avg_activation_percentage": 99.932,
+                    "num_samples": 500
+                }
+            ]
+        },
+        "cc_news": {
+            "dataset": "cc_news",
+            "split": "train",
+            "num_samples": 500,
+            "activation_threshold": 0.001,
+            "overall_avg_activation_percentage": 99.3191,
+            "layers": [
+                {
+                    "layer_id": 0,
+                    "avg_activation_percentage": 97.0139,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 1,
+                    "avg_activation_percentage": 98.2952,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 2,
+                    "avg_activation_percentage": 98.336,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 3,
+                    "avg_activation_percentage": 98.0095,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 4,
+                    "avg_activation_percentage": 98.4997,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 5,
+                    "avg_activation_percentage": 99.0086,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 6,
+                    "avg_activation_percentage": 99.3544,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 7,
+                    "avg_activation_percentage": 99.4434,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 8,
+                    "avg_activation_percentage": 99.4914,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 9,
+                    "avg_activation_percentage": 99.4613,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 10,
+                    "avg_activation_percentage": 99.533,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 11,
+                    "avg_activation_percentage": 99.5666,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 12,
+                    "avg_activation_percentage": 99.6072,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 13,
+                    "avg_activation_percentage": 99.6518,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 14,
+                    "avg_activation_percentage": 99.7075,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 15,
+                    "avg_activation_percentage": 99.7501,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 16,
+                    "avg_activation_percentage": 99.7777,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 17,
+                    "avg_activation_percentage": 99.8142,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 18,
+                    "avg_activation_percentage": 99.844,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 19,
+                    "avg_activation_percentage": 99.8681,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 20,
+                    "avg_activation_percentage": 99.8758,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 21,
+                    "avg_activation_percentage": 99.8981,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 22,
+                    "avg_activation_percentage": 99.9116,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 23,
+                    "avg_activation_percentage": 99.9398,
+                    "num_samples": 500
+                }
+            ]
+        },
+        "squad": {
+            "dataset": "squad",
+            "split": "train",
+            "num_samples": 500,
+            "activation_threshold": 0.001,
+            "overall_avg_activation_percentage": 99.3266,
+            "layers": [
+                {
+                    "layer_id": 0,
+                    "avg_activation_percentage": 97.2177,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 1,
+                    "avg_activation_percentage": 98.3029,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 2,
+                    "avg_activation_percentage": 98.333,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 3,
+                    "avg_activation_percentage": 98.0424,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 4,
+                    "avg_activation_percentage": 98.5321,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 5,
+                    "avg_activation_percentage": 99.0024,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 6,
+                    "avg_activation_percentage": 99.3514,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 7,
+                    "avg_activation_percentage": 99.4427,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 8,
+                    "avg_activation_percentage": 99.4789,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 9,
+                    "avg_activation_percentage": 99.4451,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 10,
+                    "avg_activation_percentage": 99.5305,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 11,
+                    "avg_activation_percentage": 99.5651,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 12,
+                    "avg_activation_percentage": 99.6034,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 13,
+                    "avg_activation_percentage": 99.6432,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 14,
+                    "avg_activation_percentage": 99.7025,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 15,
+                    "avg_activation_percentage": 99.7425,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 16,
+                    "avg_activation_percentage": 99.7729,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 17,
+                    "avg_activation_percentage": 99.8109,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 18,
+                    "avg_activation_percentage": 99.8407,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 19,
+                    "avg_activation_percentage": 99.8661,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 20,
+                    "avg_activation_percentage": 99.8755,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 21,
+                    "avg_activation_percentage": 99.897,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 22,
+                    "avg_activation_percentage": 99.9074,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 23,
+                    "avg_activation_percentage": 99.9326,
+                    "num_samples": 500
+                }
+            ]
+        },
+        "cnn_dailymail": {
+            "dataset": "cnn_dailymail",
+            "split": "train",
+            "num_samples": 500,
+            "activation_threshold": 0.001,
+            "overall_avg_activation_percentage": 99.3335,
+            "layers": [
+                {
+                    "layer_id": 0,
+                    "avg_activation_percentage": 97.2428,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 1,
+                    "avg_activation_percentage": 98.36,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 2,
+                    "avg_activation_percentage": 98.3083,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 3,
+                    "avg_activation_percentage": 97.9517,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 4,
+                    "avg_activation_percentage": 98.4759,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 5,
+                    "avg_activation_percentage": 99.0204,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 6,
+                    "avg_activation_percentage": 99.3833,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 7,
+                    "avg_activation_percentage": 99.455,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 8,
+                    "avg_activation_percentage": 99.5134,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 9,
+                    "avg_activation_percentage": 99.4807,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 10,
+                    "avg_activation_percentage": 99.5432,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 11,
+                    "avg_activation_percentage": 99.5713,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 12,
+                    "avg_activation_percentage": 99.6123,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 13,
+                    "avg_activation_percentage": 99.6523,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 14,
+                    "avg_activation_percentage": 99.7142,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 15,
+                    "avg_activation_percentage": 99.7607,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 16,
+                    "avg_activation_percentage": 99.7761,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 17,
+                    "avg_activation_percentage": 99.821,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 18,
+                    "avg_activation_percentage": 99.842,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 19,
+                    "avg_activation_percentage": 99.8752,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 20,
+                    "avg_activation_percentage": 99.8807,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 21,
+                    "avg_activation_percentage": 99.9021,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 22,
+                    "avg_activation_percentage": 99.9183,
+                    "num_samples": 500
+                },
+                {
+                    "layer_id": 23,
+                    "avg_activation_percentage": 99.9428,
+                    "num_samples": 500
+                }
+            ]
+        }
+    }
+}

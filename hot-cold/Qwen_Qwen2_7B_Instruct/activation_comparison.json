@@ -1,0 +1,26 @@
+{
+    "model": "Qwen/Qwen2-7B-Instruct",
+    "activation_threshold": 0.001,
+    "dataset_averages": {
+        "wikitext": {
+            "overall_activation_percentage": 99.6938,
+            "num_samples": 321
+        },
+        "gsm8k": {
+            "overall_activation_percentage": 99.6757,
+            "num_samples": 500
+        },
+        "cc_news": {
+            "overall_activation_percentage": 99.6853,
+            "num_samples": 500
+        },
+        "squad": {
+            "overall_activation_percentage": 99.6805,
+            "num_samples": 500
+        },
+        "cnn_dailymail": {
+            "overall_activation_percentage": 99.6958,
+            "num_samples": 500
+        }
+    }
+}

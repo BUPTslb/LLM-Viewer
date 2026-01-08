@@ -1,0 +1,136 @@
+{
+    "dataset": "wikitext",
+    "split": "test",
+    "num_samples": 321,
+    "average_density": 0.9864128017536947,
+    "layers": [
+        {
+            "layer_id": 0,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 1,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 2,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 3,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 4,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 5,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 6,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 7,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 8,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 9,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 10,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 11,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 12,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 13,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 14,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        },
+        {
+            "layer_id": 15,
+            "total_neurons": 2048,
+            "hot_neurons": 2048,
+            "hot_pct": 100.0,
+            "cold_neurons": 0,
+            "cold_pct": 0.0
+        }
+    ]
+}

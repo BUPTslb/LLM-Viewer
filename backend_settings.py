@@ -9,6 +9,7 @@ avaliable_model_ids_sources = {
     "facebook/opt-125m": {"source": "huggingface"},
     "facebook/opt-1.3b": {"source": "huggingface"},
     "facebook/opt-2.7b": {"source": "huggingface"},
+    "facebook/opt-13b": {"source": "huggingface"},
     "facebook/opt-6.7b": {"source": "huggingface"},
     "facebook/opt-30b": {"source": "huggingface"},
     "facebook/opt-66b": {"source": "huggingface"},

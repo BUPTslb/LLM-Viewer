@@ -1,0 +1,26 @@
+{
+    "model": "mistralai/Mistral-7B-Instruct-v0.1",
+    "activation_threshold": 0.001,
+    "dataset_averages": {
+        "wikitext": {
+            "overall_activation_percentage": 93.9797,
+            "num_samples": 321
+        },
+        "gsm8k": {
+            "overall_activation_percentage": 95.0324,
+            "num_samples": 500
+        },
+        "cc_news": {
+            "overall_activation_percentage": 94.9595,
+            "num_samples": 500
+        },
+        "squad": {
+            "overall_activation_percentage": 95.1074,
+            "num_samples": 500
+        },
+        "cnn_dailymail": {
+            "overall_activation_percentage": 95.0726,
+            "num_samples": 500
+        }
+    }
+}

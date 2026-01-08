@@ -1,0 +1,26 @@
+{
+    "model": "google/gemma-2-2b-it",
+    "activation_threshold": 0.001,
+    "dataset_averages": {
+        "wikitext": {
+            "overall_activation_percentage": 95.4487,
+            "num_samples": 321
+        },
+        "gsm8k": {
+            "overall_activation_percentage": 96.4557,
+            "num_samples": 500
+        },
+        "cc_news": {
+            "overall_activation_percentage": 96.4204,
+            "num_samples": 500
+        },
+        "squad": {
+            "overall_activation_percentage": 96.3467,
+            "num_samples": 500
+        },
+        "cnn_dailymail": {
+            "overall_activation_percentage": 96.3907,
+            "num_samples": 500
+        }
+    }
+}

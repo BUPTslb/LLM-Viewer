@@ -1,0 +1,18 @@
+{
+    "model": "google/gemma-2-2b-it",
+    "num_samples": 500,
+    "datasets": [
+        "wikitext",
+        "gsm8k",
+        "cc_news",
+        "squad",
+        "cnn_dailymail"
+    ],
+    "average_densities": {
+        "wikitext": 0.9615329125288605,
+        "gsm8k": 0.969728057705439,
+        "cc_news": 0.9747407281398773,
+        "squad": 0.9745845562907366,
+        "cnn_dailymail": 0.9751809332279059
+    }
+}

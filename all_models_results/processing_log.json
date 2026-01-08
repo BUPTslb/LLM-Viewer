@@ -1,0 +1,23 @@
+{
+    "start_time": "2025-07-26 04:16:41",
+    "models": {
+        "Qwen/Qwen1.5-4B-Chat": "\u6210\u529f",
+        "THUDM/chatglm2-6b": "\u5931\u8d25",
+        "facebook/opt-6.7b": "\u6210\u529f",
+        "mistralai/Mistral-7B-Instruct-v0.1": "\u6210\u529f",
+        "Qwen/Qwen2-7B-Instruct": "\u6210\u529f",
+        "meta-llama/Meta-Llama-3-8B-Instruct": "\u6210\u529f"
+    },
+    "end_time": "2025-07-26 04:38:14",
+    "successful_models": [
+        "Qwen/Qwen1.5-4B-Chat",
+        "facebook/opt-6.7b",
+        "mistralai/Mistral-7B-Instruct-v0.1",
+        "Qwen/Qwen2-7B-Instruct",
+        "meta-llama/Meta-Llama-3-8B-Instruct"
+    ],
+    "failed_models": [
+        "THUDM/chatglm2-6b"
+    ],
+    "success_rate": "5/6"
+}
