@@ -5,6 +5,30 @@ from roofline_model import roofline_analyze
 from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM
 from utils import str_number, str_number_time
 import math
+import json
+from types import SimpleNamespace
+
+
+def _to_namespace(obj):
+    """Recursively convert dicts to attribute-access objects.
+
+    This avoids adding runtime deps (e.g., easydict) and matches the project's
+    existing `getattr(model_params, ...)` access pattern.
+    """
+
+    if isinstance(obj, dict):
+        return SimpleNamespace(**{k: _to_namespace(v) for k, v in obj.items()})
+    if isinstance(obj, list):
+        return [_to_namespace(v) for v in obj]
+    return obj
+
+
+def _load_local_gpt_oss_config() -> SimpleNamespace:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.join(current_dir, "configs", "config.json")
+    with open(config_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return _to_namespace(data)
 
 ALL_DATA_NAMES = [
     "OPs",
@@ -74,7 +98,20 @@ class ModelAnalyzer:
                 self.model_params = module.model_params[model_id]
             else:
                 # For other huggingface models, use AutoConfig
-                self.model_params = AutoConfig.from_pretrained(model_id, trust_remote_code=True)
+                try:
+                    self.model_params = AutoConfig.from_pretrained(model_id, trust_remote_code=True)
+                except KeyError as e:
+                    # Common failure mode: installed transformers does not recognize
+                    # a new/remote `model_type` (e.g., 'gpt_oss').
+                    if "gpt_oss" in str(e) or "gpt-oss" in model_id or "gpt_oss" in model_id:
+                        print(
+                            "WARN: transformers cannot resolve model_type 'gpt_oss'; "
+                            "falling back to local configs/config.json. "
+                            "(Tip: you can also run with '--source gpt'.)"
+                        )
+                        self.model_params = _load_local_gpt_oss_config()
+                    else:
+                        raise
         else:
             # For explicitly specified non-huggingface sources
             if not os.path.exists(f"model_params/{source}.py"):
@@ -580,7 +617,8 @@ class ModelAnalyzer:
             total_results[stage]["inference_time"] = total_results[stage]["inference_time"]
 
         # Flash capacity check (Flash-Direct core constraint).
-        # Treat the sum of per-layer weight bytes (unique parameters) as the total model weight size.
+        # Flash capacity check must use *stored* weights (unique parameters), not
+        # per-inference activated weights (important for MoE).
         if self.weight_storage == "flash":
             hw = hardware_params[self.hardware]
             flash_capacity = hw.get("flash_capacity")
@@ -589,7 +627,24 @@ class ModelAnalyzer:
                     f"Hardware '{self.hardware}' does not define 'flash_capacity' but weight_storage='flash' was requested."
                 )
 
-            total_weight_bytes = total_results["prefill"]["load_weight"]
+            if hasattr(self.config, "get_total_weight_bytes"):
+                total_weight_bytes = self.config.get_total_weight_bytes(
+                    self.model_params, self.tp_size, w_byte
+                )
+            else:
+                # Fallback: approximate stored weights as (sum of linear weights per block) * num_layers
+                # plus embeddings/lm_head once.
+                linear_layers = self.config.get_linear_layers(self.model_params, self.tp_size)
+                per_block = 0
+                for _, (ic, oc) in linear_layers.items():
+                    per_block += ic * oc
+                vocab_size = self.config.get_vocab_size(self.model_params)
+                hidden_size = self.config.get_hidden_size(self.model_params)
+                num_layers = self.config.get_num_hidden_layers(self.model_params)
+                tied = bool(getattr(self.model_params, "tie_word_embeddings", False))
+                embed_and_head = (vocab_size * hidden_size) * (1 if tied else 2)
+                total_weight_bytes = (per_block * num_layers + embed_and_head) * w_byte
+
             if total_weight_bytes > flash_capacity:
                 raise ValueError(
                     "Model weights exceed flash capacity"

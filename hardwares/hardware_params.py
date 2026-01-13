@@ -52,21 +52,37 @@ hardware_params = {
     # 32GB DDR5-5600 Desktop Memory
     # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
     # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
-    "dram_bandwidth": 89.6e9,       # bytes/s
-    "dram_capacity": 48e9,         # bytes
+    "dram_bandwidth": 179.2e9,       # bytes/s
+    "dram_capacity": 41e9,         # bytes
     # NPU + iGPU FP16 合计（典型 40~60 TOPS）
     "FP16": 50e12,                 # ops/s
     # NPU SRAM + LLC（估算）
     "onchip_buffer": 32e6,         # bytes
 },
-    "AIPC_HBF-PCIE": {
+    "AIPC_HBF-PCIE6": {
    
     # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
     # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
     "dram_bandwidth": 89.6e9,       # bytes/s
-    "dram_capacity": 2048e8,         # bytes
+    "dram_capacity": 1024e8,         # bytes
     # 32GB PCIE-HBF，PCIe 5.0 NVMe SSD 16*Lanes
     "flash_bandwidth": 64e9,        # bytes/s
+    "flash_capacity": 64e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE7": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # 32GB PCIE-HBF，PCIe 5.0 NVMe SSD 16*Lanes
+    "flash_bandwidth": 128e9,        # bytes/s
     "flash_capacity": 64e9,        # bytes
 
     # NPU + iGPU FP16 合计（典型 40~60 TOPS）
@@ -82,7 +98,7 @@ hardware_params = {
     "dram_bandwidth": 89.6e9,       # bytes/s
     "dram_capacity": 2048e8,         # bytes
     # 32GB PCIE-HBF，DDR
-    "flash_bandwidth": 120e9,        # bytes/s (≈ 4ch × 30GB/s) 4-channel LPDDR5
+    "flash_bandwidth": 89.6e9,        # bytes/s (≈ 4ch × 30GB/s) 4-channel LPDDR5
     "flash_capacity": 64e9,        # bytes
 
     # NPU + iGPU FP16 合计（典型 40~60 TOPS）
@@ -91,15 +107,255 @@ hardware_params = {
     # NPU SRAM + LLC（估算）
     "onchip_buffer": 32e6,         # bytes
 },
-    "AIPC_HBF-2.5D": {
+#     "AIPC_HBF-2.5D": {
+   
+#     # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+#     # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+#     "dram_bandwidth": 89.6e9,       # bytes/s
+#     "dram_capacity": 2048e8,         # bytes 可以更小
+#     # 32GB PCIE-HBF，2.5D
+#     "flash_bandwidth":  150e9,        # bytes/s 带宽和容量有关系
+#     "flash_capacity": 64e9,        # bytes 
+
+#     # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+#     "FP16": 50e12,                 # ops/s
+
+#     # NPU SRAM + LLC（估算）
+#     "onchip_buffer": 32e6,         # bytes
+# },
+    "AIPC_DRAM5600-QWEN32B": {
+    # 32GB DDR5-5600 Desktop Memory
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    # "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_bandwidth": 179.2e9,       # bytes/s
+    "dram_capacity": 161e9,         # bytes
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE6-QWEN32B": {
    
     # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
     # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
     "dram_bandwidth": 89.6e9,       # bytes/s
-    "dram_capacity": 2048e8,         # bytes 可以更小
-    # 32GB PCIE-HBF，2.5D
-    "flash_bandwidth":  150e9,        # bytes/s 带宽和容量有关系
-    "flash_capacity": 64e9,        # bytes 
+    "dram_capacity": 1024e8,         # bytes
+    # PCIE-HBF，PCIe 6 * 8Lanes =64GBps
+    "flash_bandwidth": 64e9,        # bytes/s
+    "flash_capacity": 160e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE7-QWEN32B": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # PCIE-HBF，PCIe 7 * 8Lanes =128GBps
+    "flash_bandwidth": 128e9,        # bytes/s
+    "flash_capacity": 160e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-DDR-QWEN32B": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # 32GB PCIE-HBF，DDR
+    "flash_bandwidth": 89.6e9,        # bytes/s (≈ 4ch × 30GB/s) 4-channel LPDDR5
+    "flash_capacity": 160e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+"AIPC_DRAM5600-llama70b": {
+    # 32GB DDR5-5600 Desktop Memory
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    # "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_bandwidth": 179.2e9,       # bytes/s
+    "dram_capacity": 185e9,         # bytes
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE6-llama70b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # PCIE-HBF，PCIe 6 * 8Lanes =64GBps
+    "flash_bandwidth": 64e9,        # bytes/s
+    "flash_capacity": 184e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE7-llama70b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # PCIE-HBF，PCIe 7 * 8Lanes =128GBps
+    "flash_bandwidth": 128e9,        # bytes/s
+    "flash_capacity": 184e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-DDR-llama70b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # 32GB PCIE-HBF，DDR
+    "flash_bandwidth": 89.6e9,        # bytes/s (≈ 4ch × 30GB/s) 4-channel LPDDR5
+    "flash_capacity": 184e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+"AIPC_DRAM5600-llama405b": {
+    # 32GB DDR5-5600 Desktop Memory
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    # "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_bandwidth": 179.2e9,       # bytes/s
+    "dram_capacity": 1351e9,         # bytes
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE6-llama405b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # PCIE-HBF，PCIe 6 * 8Lanes =64GBps
+    "flash_bandwidth": 64e9,        # bytes/s
+    "flash_capacity": 1350e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE7-llama405b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # PCIE-HBF，PCIe 7 * 8Lanes =128GBps
+    "flash_bandwidth": 128e9,        # bytes/s
+    "flash_capacity": 1350e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-DDR-llama405b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # 32GB PCIE-HBF，DDR
+    "flash_bandwidth": 89.6e9,        # bytes/s (≈ 4ch × 30GB/s) 4-channel LPDDR5
+    "flash_capacity": 1350e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+"AIPC_DRAM5600-gpt120b": {
+    # 32GB DDR5-5600 Desktop Memory
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    # "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_bandwidth": 179.2e9,       # bytes/s
+    "dram_capacity": 52e9,         # bytes
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE6-gpt120b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1e8,         # bytes
+    # PCIE-HBF，PCIe 6 * 8Lanes =64GBps
+    "flash_bandwidth": 64e9,        # bytes/s
+    "flash_capacity": 100000e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-PCIE7-gpt120b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # PCIE-HBF，PCIe 7 * 8Lanes =128GBps
+    "flash_bandwidth": 128e9,        # bytes/s
+    "flash_capacity": 1350e9,        # bytes
+
+    # NPU + iGPU FP16 合计（典型 40~60 TOPS）
+    "FP16": 50e12,                 # ops/s
+
+    # NPU SRAM + LLC（估算）
+    "onchip_buffer": 32e6,         # bytes
+},
+    "AIPC_HBF-DDR-gpt120b": {
+   
+    # 双通道：2 * DDR5 5600 MT/s, 64-bit ≈ 89.6 GB/s
+    # 四通道：2 * DDR5 5600 MT/s, 64-bit ≈ 179.2 GB/s
+    "dram_bandwidth": 89.6e9,       # bytes/s
+    "dram_capacity": 1024e8,         # bytes
+    # 32GB PCIE-HBF，DDR
+    "flash_bandwidth": 89.6e9,        # bytes/s (≈ 4ch × 30GB/s) 4-channel LPDDR5
+    "flash_capacity": 1350e9,        # bytes
 
     # NPU + iGPU FP16 合计（典型 40~60 TOPS）
     "FP16": 50e12,                 # ops/s
